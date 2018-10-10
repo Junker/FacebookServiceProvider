@@ -1,7 +1,6 @@
 # FacebookServiceProvider
 
-Facebook Service Provider for Silex 
-
+Facebook SDK v5 Service Provider for Silex 
 
 ## Requirements
 silex 1.x

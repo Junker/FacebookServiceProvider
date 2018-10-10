@@ -1,0 +1,21 @@
+{
+    "name": "junker/facebook-service-provider",
+    "description": "Facebook Service Provider for Silex",
+    "keywords": ["silex","facebook", "graph"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Kosenkov",
+            "email": "dk-junker@ya.ru"
+        }
+    ],
+    "require": {
+        "silex/silex": "1.*",
+        "facebook/graph-sdk": "^5.6"
+    },
+    "autoload": {
+        "psr-0" : {
+            "Junker" : "src/"
+        }
+    }
+}

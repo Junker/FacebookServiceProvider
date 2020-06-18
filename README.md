@@ -3,12 +3,12 @@
 Facebook SDK v5 Service Provider for Silex 
 
 ## Requirements
-silex 1.x
+silex 2.x
 
 ## Installation
 The best way to install FacebookServiceProvider is to use a [Composer](https://getcomposer.org/download):
 
-    php composer.phar require junker/facebook-service-provider
+    composer require junker/facebook-service-provider
 
 ## Examples
 

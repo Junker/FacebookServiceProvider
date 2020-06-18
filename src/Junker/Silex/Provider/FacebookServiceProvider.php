@@ -1,25 +1,22 @@
 <?php
 namespace Junker\Silex\Provider;
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 use Junker\Silex\Facebook\PersistentDataHandler;
 
 class FacebookServiceProvider implements ServiceProviderInterface
 {
-    public function register(Application $app)
+    public function register(Container $app)
     {
-        $app['facebook'] = $app->share(function(Application $app) {
+        $app['facebook'] = function($app) {
             $options = $app['facebook.options'];
 
             if (!isset($options['persistent_data_handler']))
                 $options['persistent_data_handler'] = new PersistentDataHandler($app);
-            
+
             $fb = new \Facebook\Facebook($options);
 
             return $fb;
-        });
-    }
-    public function boot(Application $app)
-    {
+        };
     }
 }
